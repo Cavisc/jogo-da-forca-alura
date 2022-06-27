@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="assets/Top.svg" />
+    <title>Jogo da Forca</title>
+    <!--css-->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!--fonte-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <img src="assets/Top.svg" alt="Logo da Alura" class="logo-alura" />
+    </header>
+
+    <main>
+      <div class="area-forca">
+        <canvas class="quadro-forca"></canvas>
+
+        <div class="palavra"></div>
+
+        <div class="categoria"></div>
+
+        <div class="local-letras-erradas">
+          <h2 class="titulo-letras-erradas">Letras Erradas:</h2>
+          <span class="letras-erradas"></span>
+        </div>
+
+        <div class="teclado">
+          <div class="teclas">
+            <button
+              class="tecla"
+              id="tecla-A"
+              onclick='verificaLetraEscolhida("A")'
+            >
+              A
+            </button>
+            <button
+              class="tecla"
+              id="tecla-B"
+              onclick='verificaLetraEscolhida("B")'
+            >
+              B
+            </button>
+            <button
+              class="tecla"
+              id="tecla-C"
+              onclick='verificaLetraEscolhida("C")'
+            >
+              C
+            </button>
+            <button
+              class="tecla"
+              id="tecla-D"
+              onclick='verificaLetraEscolhida("D")'
+            >
+              D
+            </button>
+            <button
+              class="tecla"
+              id="tecla-E"
+              onclick='verificaLetraEscolhida("E")'
+            >
+              E
+            </button>
+            <button
+              class="tecla"
+              id="tecla-F"
+              onclick='verificaLetraEscolhida("F")'
+            >
+              F
+            </button>
+            <button
+              class="tecla"
+              id="tecla-G"
+              onclick='verificaLetraEscolhida("G")'
+            >
+              G
+            </button>
+            <button
+              class="tecla"
+              id="tecla-H"
+              onclick='verificaLetraEscolhida("H")'
+            >
+              H
+            </button>
+            <button
+              class="tecla"
+              id="tecla-I"
+              onclick='verificaLetraEscolhida("I")'
+            >
+              I
+            </button>
+          </div>
+
+          <div class="teclas">
+            <button
+              class="tecla"
+              id="tecla-J"
+              onclick='verificaLetraEscolhida("J")'
+            >
+              J
+            </button>
+            <button
+              class="tecla"
+              id="tecla-K"
+              onclick='verificaLetraEscolhida("K")'
+            >
+              K
+            </button>
+            <button
+              class="tecla"
+              id="tecla-L"
+              onclick='verificaLetraEscolhida("L")'
+            >
+              L
+            </button>
+            <button
+              class="tecla"
+              id="tecla-M"
+              onclick='verificaLetraEscolhida("M")'
+            >
+              M
+            </button>
+            <button
+              class="tecla"
+              id="tecla-N"
+              onclick='verificaLetraEscolhida("N")'
+            >
+              N
+            </button>
+            <button
+              class="tecla"
+              id="tecla-O"
+              onclick='verificaLetraEscolhida("O")'
+            >
+              O
+            </button>
+            <button
+              class="tecla"
+              id="tecla-P"
+              onclick='verificaLetraEscolhida("P")'
+            >
+              P
+            </button>
+            <button
+              class="tecla"
+              id="tecla-Q"
+              onclick='verificaLetraEscolhida("Q")'
+            >
+              Q
+            </button>
+            <button
+              class="tecla"
+              id="tecla-R"
+              onclick='verificaLetraEscolhida("R")'
+            >
+              R
+            </button>
+          </div>
+
+          <div class="teclas">
+            <button
+              class="tecla"
+              id="tecla-S"
+              onclick='verificaLetraEscolhida("S")'
+            >
+              S
+            </button>
+            <button
+              class="tecla"
+              id="tecla-T"
+              onclick='verificaLetraEscolhida("T")'
+            >
+              T
+            </button>
+            <button
+              class="tecla"
+              id="tecla-U"
+              onclick='verificaLetraEscolhida("U")'
+            >
+              U
+            </button>
+            <button
+              class="tecla"
+              id="tecla-V"
+              onclick='verificaLetraEscolhida("V")'
+            >
+              V
+            </button>
+            <button
+              class="tecla"
+              id="tecla-W"
+              onclick='verificaLetraEscolhida("W")'
+            >
+              W
+            </button>
+            <button
+              class="tecla"
+              id="tecla-X"
+              onclick='verificaLetraEscolhida("X")'
+            >
+              X
+            </button>
+            <button
+              class="tecla"
+              id="tecla-Y"
+              onclick='verificaLetraEscolhida("Y")'
+            >
+              Y
+            </button>
+            <button
+              class="tecla"
+              id="tecla-Z"
+              onclick='verificaLetraEscolhida("Z")'
+            >
+              Z
+            </button>
+          </div>
+        </div>
+
+        <div class="btns-opcoes">
+          <button class="btn-reset" type="button">Novo jogo</button>
+          <button
+            class="btn-quit"
+            type="button"
+            onclick="window.location.href = 'index.html'"
+          >
+            Desistir
+          </button>
+        </div>
+
+        <div class="modal-container">
+          <div class="modal-vitoria desaparece">
+            <button class="fechar" id="fechar-vitoria">X</button>
+            <h3 class="titulo-modal-vitoria">Parabéns!</h3>
+            <p class="texto-modal-vitoria">
+              Você acertou a palavra e não foi enforcado!
+            </p>
+            <div class="btns-opcoes-modal">
+              <button
+                class="btn-reset-modal"
+                id="btn-reset-modal-vitoria"
+                type="button"
+              >
+                Jogar novamente
+              </button>
+              <button
+                class="btn-quit-modal"
+                type="button"
+                onclick="window.location.href = 'index.html'"
+              >
+                Voltar para o início
+              </button>
+            </div>
+          </div>
+
+          <div class="modal-derrota desaparece">
+            <button class="fechar" id="fechar-derrota">X</button>
+            <h3 class="titulo-modal-derrota">Que pena!</h3>
+            <p class="texto-modal-derrota">Não foi dessa vez, a palavra era:</p>
+            <div class="palavra-certa"></div>
+            <div class="btns-opcoes-modal">
+              <button
+                class="btn-reset-modal"
+                id="btn-reset-modal-derrota"
+                type="button"
+              >
+                Jogar novamente
+              </button>
+              <button
+                class="btn-quit-modal"
+                type="button"
+                onclick="window.location.href = 'index.html'"
+              >
+                Voltar para o início
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <img
+        src="assets/perfil.jpg"
+        alt="Foto da pessoa que codou o site."
+        class="minha-foto"
+      />
+      <h3 class="nome">Carlos Coelho</h3>
+      <p class="descricao">
+        <span class="local-descricao">Made in BH</span><br />
+        <em>Esse é o meu segundo projeto.</em>
+      </p>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
