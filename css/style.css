@@ -342,6 +342,85 @@ main {
   color: var(--text-color-light);
 }
 
+form {
+  height: 45vh;
+  margin: 5.5rem 0;
+  background: var(--base-color-second);
+  padding: 2rem 1rem;
+  border-radius: 16px;
+  border: 2px dashed var(--text-color);
+}
+
+.titulo-add-palavra {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--base-color);
+  margin-bottom: 2rem;
+}
+
+fieldset {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.titulo-input {
+  font-size: 1.2rem;
+  color: var(--base-color);
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.nova-palavra, .categoria-palavra-nova {
+  border: none;
+  border-radius: 16px;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  color: var(--base-color);
+  font-family: var(--fonte);
+  font-weight: bold;
+}
+
+.nova-palavra:focus, .categoria-palavra-nova:focus {
+  box-shadow: 0;
+  outline: var(--base-color);
+}
+
+.btn-salvar {
+  width: 50%;
+  margin: 0 auto;
+  background: var(--base-color);
+  color: var(--text-color-light);
+  border: 0;
+  border-radius: 16px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-salvar:hover {
+  background: var(--base-color-alt);
+  color: var(--text-color);
+}
+
+.btn-voltar {
+  width: 60%;
+  margin: 0 auto;
+  border: 0;
+  border-radius: 16px;
+  color: var(--base-color);
+  background: var(--text-color-light);
+  padding: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-voltar:hover {
+  background: var(--text-color);
+  color: var(--base-color-alt);
+}
+
 /*footer*/
 footer {
   background: var(--base-color);
@@ -430,5 +509,24 @@ em {
   .btn-reset, .btn-quit {
     width: 40%;
     padding: 2rem;
+  }
+
+  form {
+    height: 55vh;
+    width: 50%;
+    padding: 4rem 2rem;
+    margin: 2rem;
+  }
+
+  .titulo-add-palavra {
+    text-align: center; 
+  }
+
+  .nova-palavra {
+    margin-bottom: 2rem;
+  }
+
+  .categoria-palavra-nova {
+    margin-bottom: 3rem;
   }
 }

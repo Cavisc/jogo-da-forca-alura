@@ -22,22 +22,25 @@
     </header>
 
     <main>
-      <div class="botoes-iniciais">
-        <button
-          type="button"
-          class="btn-comecar"
-          onclick="window.location.href = 'jogo.html'"
-        >
-          Começar o jogo
-        </button>
-        <button
-          type="button"
-          class="btn-add"
-          onclick="window.location.href = 'add-palavra.html'"
-        >
-          Adicionar palavra
-        </button>
-      </div>
+      <form>
+        <h1 class="titulo-add-palavra">Adicionar palavra</h1>
+        <fieldset>
+          <legend class="titulo-input">Palavra:</legend>
+          <input type="text" class="nova-palavra" />
+
+          <legend class="titulo-input">Categoria:</legend>
+          <input type="text" class="categoria-palavra-nova" />
+
+          <button class="btn-salvar" type="button">Salvar</button>
+          <button
+            class="btn-voltar"
+            type="button"
+            onclick="window.location.href = 'index.html'"
+          >
+            Voltar para o início
+          </button>
+        </fieldset>
+      </form>
     </main>
 
     <footer>
@@ -52,5 +55,7 @@
         <em>Esse é o meu segundo projeto.</em>
       </p>
     </footer>
+
+    <script src="js/script.js"></script>
   </body>
 </html>
