@@ -182,7 +182,7 @@ function desenhoDaForca() {
 
   //sol
   pincel.beginPath()
-  pincel.fillStyle = '#313168'
+  pincel.fillStyle = '#fafafa'
   pincel.arc(280, 20, 20, 0, 2 * Math.PI)
   pincel.fill()
   pincel.closePath()
@@ -227,6 +227,7 @@ function comparaLetra(letra) {
 function verificaTeclado() {
   document.addEventListener('keydown', function (evento) {
     const codigo = evento.keyCode
+    console.log(codigo)
     if (eLetra(codigo)) {
       const letraDigitada = evento.key.toUpperCase()
       if (erros > 0) {
@@ -238,7 +239,7 @@ function verificaTeclado() {
 }
 
 function eLetra(codigo) {
-  return codigo >= 65 && codigo <= 90
+  return codigo == 186 || (codigo >= 65 && codigo <= 90)
 }
 
 function verificaStatus() {
@@ -272,6 +273,7 @@ function desenhaCabeca() {
   const pincel = quadro.getContext('2d')
 
   pincel.beginPath()
+  pincel.fillStyle = '#313168'
   pincel.lineWidth = 2
   pincel.lineCap = 'round'
   pincel.arc(80, 40, 10, 0, 2 * Math.PI)
