@@ -20,5 +20,7 @@ function salvarInfo() {
   } else {
     palavras.push(palavraNova)
     categorias.push(categoriaNova)
+    inputNovaPalvra.value = ''
+    inputCategoriaNovaPalavra.value = ''
   }
 }

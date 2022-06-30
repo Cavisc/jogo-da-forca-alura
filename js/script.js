@@ -5,6 +5,10 @@ let letrasPalavraSorteada = []
 let erros = 6
 let listaDinamica = []
 
+const btnAdd = document.querySelector('.btn-add')
+
+const btnVoltarJogo = document.querySelector('.btn-voltar')
+
 const btnReset = document.querySelector('.btn-reset')
 
 const btnResetModalVitoria = document.querySelector('#btn-reset-modal-vitoria')
@@ -99,8 +103,16 @@ const categorias = [
   'OBJETO'
 ]
 
-verificaTeclado()
 desenhoDaForca()
+verificaTeclado()
+
+btnAdd.addEventListener('click', () => {
+  trocaTelaAdd()
+})
+
+btnVoltarJogo.addEventListener('click', () => {
+  trocaTelaJogo()
+})
 
 btnReset.addEventListener('click', () => {
   location.reload()
@@ -119,8 +131,6 @@ function sortearPalavra() {
   var index = Math.floor(Math.random() * palavras.length)
   palavraSorteada = palavras[index].toUpperCase()
   categoriaSorteada = categorias[index].toUpperCase()
-  console.log(palavraSorteada)
-  console.log(categoriaSorteada)
 }
 
 montarPalavra()
@@ -136,7 +146,6 @@ function montarPalavra() {
     divLetra.textContent = 'ㅤ'
     divPalavra.appendChild(divLetra)
     letrasPalavraSorteada.push(palavraSorteada[i])
-    console.log(divLetra.textContent)
   }
 }
 
@@ -195,7 +204,6 @@ function comparaLetra(letra) {
     if (!arrErradas.includes(letra)) {
       arrErradas.push(letra)
       erros--
-      console.log(erros)
       colocaLetraErrada()
       if (erros == 5) {
         desenhaCabeca()
@@ -227,7 +235,6 @@ function comparaLetra(letra) {
 function verificaTeclado() {
   document.addEventListener('keydown', function (evento) {
     const codigo = evento.keyCode
-    console.log(codigo)
     if (eLetra(codigo)) {
       const letraDigitada = evento.key.toUpperCase()
       if (erros > 0) {
@@ -253,11 +260,9 @@ function verificaStatus() {
 
   if (vitoria) {
     ganhar()
-    console.log('parabens')
     erros = 0
   } else if (arrErradas.length == 6) {
     perder()
-    console.log('perdeu')
   }
 }
 
@@ -346,20 +351,16 @@ function desenhaPernaDireita() {
   pincel.closePath()
 }
 
-function trocaTela() {
-  const areaForca = document.querySelector('.area-forca')
-  areaForca.classList.remove('desaparece')
-
-  const telaInicio = document.querySelector('.botoes-iniciais')
-  telaInicio.classList.add('desaparece')
+function trocaTelaJogo() {
+  location.reload()
 }
 
-function voltaTela() {
+function trocaTelaAdd() {
+  const areaAddPalavra = document.querySelector('.add-palavra')
+  areaAddPalavra.classList.remove('desaparece')
+
   const areaForca = document.querySelector('.area-forca')
   areaForca.classList.add('desaparece')
-
-  const telaInicio = document.querySelector('.botoes-iniciais')
-  telaInicio.classList.remove('desaparece')
 }
 
 function ganhar() {

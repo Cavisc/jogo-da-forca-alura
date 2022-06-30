@@ -20,7 +20,10 @@ body {
 
 /*logo da alura*/
 header {
-  margin: 1.5rem 1rem;
+  margin: 1.5rem 1rem 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 main {
@@ -63,12 +66,12 @@ main {
 }
 
 .btn-add {
-  padding: 1.5rem;
-  width: 240px;
-  background: var(--base-color-second);
-  color: var(--base-color);
-  border: 1px solid var(--base-color);
-  border-radius: 24px;
+  padding: 1rem;
+  font-size: 1rem;
+  background: var(--base-color);
+  color: var(--base-color-second);
+  border: none;
+  border-radius: 100%;
   font-weight: bold;
   cursor: pointer;
   transition: 0.3s;
@@ -76,8 +79,7 @@ main {
 }
 
 .btn-add:hover {
-  color: var(--base-color-alt);
-  border: 1px solid var(--base-color-alt);
+  background: var(--base-color-alt);
 }
 
 /*area da forca*/
@@ -342,9 +344,9 @@ main {
   color: var(--text-color-light);
 }
 
-form {
-  height: 45vh;
-  margin: 5.5rem 0;
+.add-palavra {
+  height: 60vh;
+  margin: 0 0 2rem;
   background: var(--base-color-second);
   padding: 2rem 1rem;
   border-radius: 16px;
@@ -459,6 +461,17 @@ em {
 }
 
 @media screen and (min-width: 768px) {
+  header {
+    margin-bottom: 5rem;
+  }
+
+  .botoes-iniciais {
+    margin-bottom: 15rem;
+  }
+  .btn-add {
+    font-size: 1.5rem;
+    padding: 1.5rem;
+  }
   .area-forca {
     width: 100%;
   }
@@ -511,7 +524,7 @@ em {
     padding: 2rem;
   }
 
-  form {
+  .add-palavra {
     height: 55vh;
     width: 50%;
     padding: 4rem 2rem;
