@@ -59,6 +59,14 @@ const palavras = [
   'Lapis'
 ]
 
+if (colocaPalavrasNovas == null) {
+  console.log('vazio')
+} else {
+  for (let i = 0; i < colocaPalavrasNovas.length; i++) {
+    palavras.push(colocaPalavrasNovas[i])
+  }
+}
+
 const categorias = [
   'VEÍCULO',
   'ANIMAL',
@@ -102,6 +110,14 @@ const categorias = [
   'TECNOLOGIA',
   'OBJETO'
 ]
+
+if (colocaCategoriasNovas == null) {
+  console.log('vazio')
+} else {
+  for (let i = 0; i < colocaCategoriasNovas.length; i++) {
+    categorias.push(colocaCategoriasNovas[i])
+  }
+}
 
 desenhoDaForca()
 verificaTeclado()
