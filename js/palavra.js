@@ -50,6 +50,5 @@ function salvarInfo() {
         localStorage.getItem('novasCategorias')
       )
     }
-    console.log(palavras)
   }
 }

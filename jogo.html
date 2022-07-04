@@ -15,11 +15,13 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap"
       rel="stylesheet"
     />
+    <!--icones-->
+    <link rel="stylesheet" href="assets/font/style.css" />
   </head>
   <body>
     <header>
       <img src="assets/Top.svg" alt="Logo da Alura" class="logo-alura" />
-      <button type="button" class="btn-add">+</button>
+      <button type="button" class="btn-add"><i class="icon-plus"></i></button>
     </header>
 
     <main>
@@ -236,12 +238,16 @@
         </div>
 
         <div class="btns-opcoes">
-          <button class="btn-reset" type="button">Novo jogo</button>
+          <button class="btn-reset" type="button">
+            <i class="icon-refresh-cw"></i>
+            Novo jogo
+          </button>
           <button
             class="btn-quit"
             type="button"
             onclick="window.location.href = 'index.html'"
           >
+            <i class="icon-log-out"></i>
             Desistir
           </button>
         </div>
@@ -250,6 +256,9 @@
           <div class="modal-vitoria desaparece">
             <button class="fechar" id="fechar-vitoria">X</button>
             <h3 class="titulo-modal-vitoria">Parabéns!</h3>
+            <h3 class="titulo-modal-vitoria">
+              <i class="icon-happy2" style="font-size: 2.5rem"></i>
+            </h3>
             <p class="texto-modal-vitoria">
               Você acertou a palavra e não foi enforcado!
             </p>
@@ -259,6 +268,7 @@
                 id="btn-reset-modal-vitoria"
                 type="button"
               >
+                <i class="icon-refresh-cw"></i>
                 Jogar novamente
               </button>
               <button
@@ -266,6 +276,7 @@
                 type="button"
                 onclick="window.location.href = 'index.html'"
               >
+                <i class="icon-log-out"></i>
                 Voltar para o início
               </button>
             </div>
@@ -274,6 +285,9 @@
           <div class="modal-derrota desaparece">
             <button class="fechar" id="fechar-derrota">X</button>
             <h3 class="titulo-modal-derrota">Que pena!</h3>
+            <p class="texto-modal-derrota">
+              <i class="icon-sad2" style="font-size: 2.5rem"></i>
+            </p>
             <p class="texto-modal-derrota">Não foi dessa vez, a palavra era:</p>
             <div class="palavra-certa"></div>
             <div class="btns-opcoes-modal">
@@ -282,6 +296,7 @@
                 id="btn-reset-modal-derrota"
                 type="button"
               >
+                <i class="icon-refresh-cw"></i>
                 Jogar novamente
               </button>
               <button
@@ -289,6 +304,7 @@
                 type="button"
                 onclick="window.location.href = 'index.html'"
               >
+                <i class="icon-log-out"></i>
                 Voltar para o início
               </button>
             </div>
@@ -313,8 +329,14 @@
             placeholder="Digite a categoria da palavra"
           />
 
-          <button class="btn-salvar" type="button">Salvar</button>
-          <button class="btn-voltar" type="button">Voltar para o jogo</button>
+          <button class="btn-salvar" type="button">
+            <i class="icon-save"></i>
+            Salvar
+          </button>
+          <button class="btn-voltar" type="button">
+            <i class="icon-refresh-ccw"></i>
+            Voltar para o jogo
+          </button>
         </fieldset>
       </form>
     </main>
